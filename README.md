@@ -1,3 +1,3 @@
 # Quote app from the donald
 
-this app is purely for practise react skills and humour 
+this app is purely to practise react skills and humour 
