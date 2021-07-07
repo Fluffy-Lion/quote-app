@@ -1,6 +1,8 @@
 import './App.css';
 import { useState } from 'react'
-import { BrowserRouter as Router, Link, Switch } from 'react-router-dom'
+import QuoteCard from './Components/QuoteCard';
+import QuoteButton from './Components/QuoteButton';
+
 require('dotenv').config()
 
 const App = () => {
@@ -17,16 +19,20 @@ const App = () => {
         const data = await response.json()
         setQuote(data.value)
         } catch(error){
-            console.log(error)
+            setError({ error: true, message: error.message})
         }
     }
-
+    if(error.error){
+        return <h1>an error has occured: {error.message}</h1>
+    }
     return (
         <div>
-            <h2>{quote}</h2>
-            <button onClick={collect}>get quote</button>
+            <QuoteCard quote={quote} />
+            <QuoteButton collect={collect}>click button</QuoteButton>
         </div>
     )
 }
 
 export default App;
+
+
