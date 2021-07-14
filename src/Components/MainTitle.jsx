@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledTitle = styled.h1 `
-    font-size: 60px;
+    font-size: 70px;
     margin: 10px;
     color: #ffd500;
     font-family: 'Trebuchet MS', sans-serif;

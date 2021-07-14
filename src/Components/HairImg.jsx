@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledImg = styled.img `
-    border: solid red 4px;
+    // border: solid red 4px;
     width: 20%;
 `
 

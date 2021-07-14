@@ -18,7 +18,7 @@ const PageWrap = styled.div `
     max-width: 100%;
     padding: 20px;
     height: 100vh;
-    border: solid 8px pink;
+    // border: solid 8px pink;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -27,7 +27,7 @@ const PageWrap = styled.div `
     justify-content: center;
 `
 const StyledHeadCont = styled.div `
-    border: solid green 2px;
+    // border: solid green 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +67,7 @@ const App = () => {
             <QuoteCard>
                 <QuoteText text={quote}/>
             </QuoteCard>
-            <QuoteButton collect={collect}>click button</QuoteButton>
+            <QuoteButton collect={collect}>get a quote</QuoteButton>
         </PageWrap>
     )
 }
