@@ -2,8 +2,27 @@ import './App.css';
 import { useState } from 'react'
 import QuoteCard from './Components/QuoteCard';
 import QuoteButton from './Components/QuoteButton';
+import styled from 'styled-components'
+import backgroundImage from '../src/styles/blob-scene-haikei.svg'
+import MainTitle from './Components/MainTitle'
 
 require('dotenv').config()
+const PageWrap = styled.div `
+    background-image: url(${backgroundImage});
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60%;
+    padding: 20px;
+    height: 60vh;
+    border: solid 8px pink;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
 
 const App = () => {
 
@@ -26,10 +45,11 @@ const App = () => {
         return <h1>an error has occured: {error.message}</h1>
     }
     return (
-        <div>
+        <PageWrap>
+            <MainTitle />
             <QuoteCard quote={quote} />
             <QuoteButton collect={collect}>click button</QuoteButton>
-        </div>
+        </PageWrap>
     )
 }
 
