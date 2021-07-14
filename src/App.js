@@ -4,7 +4,9 @@ import QuoteCard from './Components/QuoteCard';
 import QuoteButton from './Components/QuoteButton';
 import styled from 'styled-components'
 import backgroundImage from '../src/styles/blob-scene-haikei.svg'
+import hairSvg from './styles/trumpHair.png'
 import MainTitle from './Components/MainTitle'
+import HairImg from './Components/HairImg';
 
 require('dotenv').config()
 const PageWrap = styled.div `
@@ -46,7 +48,8 @@ const App = () => {
     }
     return (
         <PageWrap>
-            <MainTitle />
+            <MainTitle>trumper</MainTitle>
+            <HairImg src={hairSvg} />
             <QuoteCard quote={quote} />
             <QuoteButton collect={collect}>click button</QuoteButton>
         </PageWrap>
