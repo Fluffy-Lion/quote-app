@@ -2,20 +2,22 @@ import './App.css';
 import { useState } from 'react'
 import QuoteCard from './Components/QuoteCard';
 import QuoteButton from './Components/QuoteButton';
+import MainTitle from './Components/MainTitle'
+import QuoteText from './Components/QuoteText';
+import HairImg from './Components/HairImg';
 import styled from 'styled-components'
 import backgroundImage from '../src/styles/blob-scene-haikei.svg'
 import hairSvg from './styles/trumpHair.png'
-import MainTitle from './Components/MainTitle'
-import HairImg from './Components/HairImg';
 
 require('dotenv').config()
 const PageWrap = styled.div `
     background-image: url(${backgroundImage});
+    background-color: #ffaa5f;
     margin-right: auto;
     margin-left: auto;
-    max-width: 60%;
+    max-width: 100%;
     padding: 20px;
-    height: 60vh;
+    height: 100vh;
     border: solid 8px pink;
     background-repeat: no-repeat;
     background-position: center;
@@ -24,7 +26,17 @@ const PageWrap = styled.div `
     align-items: center;
     justify-content: center;
 `
+const StyledHeadCont = styled.div `
+    border: solid green 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+
+`
+const HeadCont = ({ children }) => {
+    return <StyledHeadCont>{children}</StyledHeadCont>
+}
 
 const App = () => {
 
@@ -48,9 +60,13 @@ const App = () => {
     }
     return (
         <PageWrap>
-            <MainTitle>trumper</MainTitle>
-            <HairImg src={hairSvg} />
-            <QuoteCard quote={quote} />
+            <HeadCont>
+                <MainTitle>trumper</MainTitle>
+                <HairImg src={hairSvg} />
+            </HeadCont>
+            <QuoteCard>
+                <QuoteText text={quote}/>
+            </QuoteCard>
             <QuoteButton collect={collect}>click button</QuoteButton>
         </PageWrap>
     )

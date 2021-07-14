@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 const StyledTitle = styled.h1 `
-    font-size: 30px;
-    color: black;
+    font-size: 60px;
+    margin: 10px;
+    color: #ffd500;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 1px 1px 1px black, 2px 2px 2px black;
 `
 const MainTitle = ({ children }) => {
     return <StyledTitle>{children}</StyledTitle>

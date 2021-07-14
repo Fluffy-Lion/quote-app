@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledImg = styled.img `
     border: solid red 4px;
-    width: 40%;
+    width: 20%;
 `
 
 const HairImg = ({ src }) => {
