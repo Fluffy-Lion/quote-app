@@ -10,7 +10,7 @@ const StyleText = styled.p `
 `
 
 const QuoteText = ({ text }) => {
-    return <StyleText id="paragraph">"{text}"</StyleText>
+    return <StyleText data-testid="quoteItem"  id="paragraph">"{text}"</StyleText>
 }
 
 export default QuoteText
