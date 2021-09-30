@@ -50,6 +50,7 @@ const App = () => {
         throw new Error("oops");
       }
       const data = await response.json();
+      // console.log(data)
       setQuote(data.value);
     } catch (error) {
       setError({ error: true, message: error.message });

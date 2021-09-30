@@ -13,7 +13,7 @@ const StyledButton = styled.button`
     }
 `
 const QuoteButton = ({ children, collect }) => {
-    return <StyledButton onClick={collect}>{children}</StyledButton>
+    return <StyledButton data-testid="quoteButton" onClick={collect}>{children}</StyledButton>
 }
 
 export default QuoteButton
